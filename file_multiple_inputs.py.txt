@@ -1,0 +1,13 @@
+import math
+
+with open('input_multiple.txt', 'r') as f:
+    for line in f:
+        a, b, c = map(float, line.strip().split())
+        D = b**2 - 4*a*c
+        print(f"\nEquation: {a}x² + {b}x + {c} = 0")
+        if D >= 0:
+            x1 = (-b + math.sqrt(D)) / (2*a)
+            x2 = (-b - math.sqrt(D)) / (2*a)
+            print("Roots:", x1, x2)
+        else:
+            print("No real roots")
